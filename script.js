@@ -13,7 +13,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-var allChars = " ";
+var allChars;
 
 // Function to create a superset of all characters to choose from for generating random password
 function appendChoice (userChoice, charsToAppend) {
@@ -53,6 +53,8 @@ function generatePassword () {
   var smallLettersArr = "abcdefghijklmnopqrstuvwxyz";
   var numsArr = "0123456789";
 
+  allChars = " ";
+  
   appendChoice(specialCharBl, specialCharArr);
   appendChoice(capLettersBl, capLettersArr);
   appendChoice(smallLettersBl, smallLettersArr);
